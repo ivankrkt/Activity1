@@ -1,0 +1,11 @@
+{
+  "builds": [
+    {
+      "src": "anonar/**/*",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "anonar/build"
+      }
+    }
+  ]
+}
