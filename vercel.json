@@ -1,0 +1,10 @@
+{ 
+  "builds": [ 
+    { 
+      "src": "dist/**/*", 
+      "use": "@vercel/static" 
+    } 
+  ], 
+  "buildCommand": "echo 'Skipping build'", 
+  "installCommand": "echo 'Skipping install'" 
+} 
