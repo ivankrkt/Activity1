@@ -1,0 +1,66 @@
+/* Fun gamer design with centered text and glowing effects */
+
+body {
+  font-family: 'Oswald', sans-serif;
+  background: radial-gradient(circle at center, #0f1923, #111);
+  color: #fff;
+  text-align: center;
+}
+
+/* Navbar */
+.nav { width: 100%; background: rgba(0,0,0,0.7); }
+.brand { font-size: 2rem; font-weight: 900; letter-spacing: .25em; }
+.neon-brand { text-shadow: 0 0 10px #ff4655, 0 0 20px #ff4655; }
+
+/* Hero */
+.hero-section { padding: 6rem 2rem; }
+.hero-title { font-size: 3rem; margin: 1rem 0; }
+.neon-title { text-shadow: 0 0 15px #ff4655, 0 0 30px #ff4655; }
+.hero-sub { max-width: 600px; margin: 0 auto 2rem; color: #ccc; }
+.hero-ctas { display: flex; justify-content: center; gap: 1rem; }
+
+/* Buttons */
+.btn-slash {
+  background: #ff4655; color: #fff; padding: .75rem 1.5rem;
+  font-weight: bold; text-transform: uppercase; border: none;
+  position: relative; overflow: hidden; cursor: pointer;
+}
+.btn-slash::after {
+  content:''; position:absolute; top:0; left:-100%; width:100%; height:100%;
+  background: rgba(255,255,255,0.2); transform: skewX(-20deg);
+  transition: left .4s ease;
+}
+.btn-slash:hover::after { left:100%; }
+.btn-outline {
+  border: 2px solid #ff4655; padding: .75rem 1.5rem; background: transparent;
+  color: #fff; text-transform: uppercase; cursor: pointer;
+}
+
+/* Agents */
+.agents { padding: 4rem 2rem; }
+.section-title { font-size: 2rem; margin-bottom: 2rem; }
+.neon-accent { color: #ff4655; text-shadow: 0 0 10px #ff4655; }
+.choices { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+.choice-card {
+  background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 12px;
+  width: 250px; cursor: pointer; transition: transform .3s, box-shadow .3s;
+}
+.choice-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff4655, 0 0 40px #ff4655;
+}
+.choice-title { font-size: 1.5rem; margin-bottom: .5rem; }
+.choice-desc { color: #ccc; }
+
+/* Modal Lightbox */
+.modal { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; }
+.modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.8); }
+.modal-content {
+  position: relative; background: #111; padding: 2rem; border-radius: 12px;
+  box-shadow: 0 0 30px #ff4655; z-index: 10; max-width: 400px;
+}
+.modal-title { font-size: 2rem; margin-bottom: 1rem; }
+.modal-close { position: absolute; top: 10px; right: 10px; background: none; border: none; color: #fff; font-size: 1.2rem; cursor: pointer; }
+
+/* Footer */
+.footer { padding: 2rem; background: rgba(0,0,0,0.7); margin-top: 2rem; }
